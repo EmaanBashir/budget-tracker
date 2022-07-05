@@ -110,7 +110,7 @@ def login_screen():
     canvas = Canvas(frame1, width = 120, height = 120)
     canvas.config(bg = blue, relief = FLAT, bd=0, highlightthickness=0)
     canvas.place(relx = 0.33, rely = 0.38, anchor = CENTER)
-    picture = PhotoImage(file = "C:\\Users\\Dell\\Desktop\\Previous semesters\\1st semester\\project1\\blue.png")
+    picture = PhotoImage(file = "blue.png")
     logo = canvas.create_image(60, 60, image = picture)
     
     #app name
@@ -167,7 +167,7 @@ def login_screen():
 
 def create_table():
     global cur,con
-    con=connect('C:\\Users\\Dell\\Desktop\\Previous semesters\\1st semester\\project1\\mydatabase.db')
+    con=connect('mydatabase.db')
     cur=con.cursor()
     cur.execute('''CREATE TABLE IF NOT EXISTS userinfo(Username TEXT
                 PRIMARY KEY,Password TEXT,First_name TEXT,Last_name TEXT)''')
@@ -717,7 +717,7 @@ def main_screen(username):
         messagebox.showwarning("WARNING","You have exceeded your total budget.\n\
  Any extra amount spent will be considered as debt.")
 #settings button
-    photo = PhotoImage(file = "C:\\Users\\Dell\\Desktop\\Previous semesters\\1st semester\\project1\\button.png")
+    photo = PhotoImage(file = "button.png")
     setting_button = Button(frame2, image = photo, highlightthickness = 0, \
                             bd = "0px", relief = FLAT, command = settings_frame)
     setting_button.place(anchor = CENTER, relx = 0.95, rely = 0.5)
